@@ -75,3 +75,16 @@ h1 {
     font-size: 20px;
 }
 
+.sites {
+    display: flex;
+    width: 960px;
+    height: auto;
+    border: 5px solid red;
+    justify-content: center;
+
+}
+
+.sites img {
+    display: flex;
+    object-fit: cover;
+}
