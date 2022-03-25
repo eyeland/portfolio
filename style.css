@@ -241,17 +241,64 @@ body {
 .footer-icons {
         display: flex;
         position: relative;
-        top: 10%;
+        top: 0%;
+        padding: 15%;
+        
 }
 
 .github {
-        height: 20%;
+        height: 15%;
         width: 20%;
 }
 
 .htmlIcon {
-        height: 20%;
-        width: 20%;
+        height: 15%;
+        width: 15%;
+}
+
+.reactIcon {
+        padding: 2%;
+        height: 15%;
+        width: 15%;
+        animation: reactRotate 3s linear infinite;
+
+}
+
+.reduxIcon {
+        padding: 2%;
+        height: 8%;
+        width: 8%;
+        animation: reduxtRotate 4s ease-in-out infinite alternate;
+}
+
+.mochaIcon {
+        height: 15%;
+        width: 15%;
+}
+.nodeJsIcon {
+        height: 15%;
+        width: 15%;
+}
+
+@keyframes reduxtRotate {
+        0%{
+                transform: rotate(0deg);
+        }
+        100%{
+                transform: rotate(360deg);
+                width: 15%;
+        }
+}
+
+
+
+@keyframes reactRotate {
+        0%{
+                transform: rotate(0deg);
+        }
+        100%{
+                transform: rotate(360deg)
+        }
 }
 
 
