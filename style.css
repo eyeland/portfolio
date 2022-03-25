@@ -1,297 +1,278 @@
-.flex .col img {
-   width: 100%;
-   height: auto;
-   box-shadow: 5px 5px 5px purple;
-   
-}
-.flex .col img:hover {
-    opacity: 0.5;
+:root {
+        --gradient: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(121,9,89,1) 49%, rgba(0,212,255,1) 100%);
 }
 
-.flex {
-    display: flex;
-    justify-content: center;
-    width: 960px;
-    max-width: 100%;
-    margin: auto;
-    padding: 80px 0px;
-    border-top: 1px solid rgba(4, 60, 112, 0.486);
-   
+*{
+        box-sizing: border-box;
 }
 
-.flex .col {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 300px;
-    margin: 1em;
-    background-color: rgba(255, 255, 255, 0.459);
-    padding: 1em;
-    font-family: cursive;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 1em;
-
-}
-
-.flex .col .btn {
-    align-self: flex-start;
-    margin-top: auto;
-}
-
-@media (max-width: 900px) {
-    .flex {
-        flex-wrap: wrap;
-    }
+body, html{
+        height: 100vh;
+        margin: 0;
 }
 
 body {
-    background: rgb(174,197,238);
-    background: -moz-radial-gradient(circle, rgba(174,197,238,1) 0%, rgba(71,78,87,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(174,197,238,1) 0%, rgba(71,78,87,1) 100%);
-    background: radial-gradient(circle, rgba(174,197,238,1) 0%, rgba(71,78,87,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aec5ee",endColorstr="#474e57",GradientType=1);
+        display: flex;
+        align-items: none;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(125deg, #00103a 0%, #3e5f77 100%);
+        
 }
 
-h1 {
-    width: 50%;
-    text-align: center;
-    font-family:cursive;
-    padding: 40px;
-    font-size: 3em;
-    color: white;
-    box-shadow: 5px 5px 15px black;
-    text-shadow: 5px 5px 5px black;
-    position: relative;
-    border-radius: 40%;
-    background-color: rebeccapurple;
-    color:bisque;
-    
-    
-    
-
-}
-.h1-box{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.459);
-    margin: 10px;
-    box-shadow: 5px 5px 15px black;
-    
-   
+.sky-container {
+        width: 100%;
+        height: 100%;
 }
 
-.about-me {
-    display: flex;
-    justify-content: center;
-    border-top: 1px solid rgba(4, 60, 112, 0.486);
-    padding: 80px 0px;
-    margin: 80px 0px;
+.star {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        color: white;
+        position: relative;
+        animation: glowing 4s linear infinite alternate;
+        border-radius: 50px;
+        opacity: 5%;
+        
+        
 }
 
-.about-me img {
-    width: 80%;
+.star:nth-child(1) {
+        top: 75%;
+        left: 35%;
+}
+.star:nth-child(2) {
+        top: 40%;
+        left: 15%;
+}
+.star:nth-child(3) {
+        top: 21%;
+        left: 85%;
+}
+.star:nth-child(4) {
+        top: 45%;
+        left: 67%;
+}
+.star:nth-child(5) {
+        top: 10%;
+        left: 15%;
+}
+.star:nth-child(6) {
+        top: 91%;
+        left: 55%;
+}
+.star:nth-child(7) {
+        top: 5%;
+        left: 76%;
 }
 
-.about-me-text {
-    flex: 1 1 450px;
-    font-size: 20px;
+.header {
+        font-family: monospace;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        animation: dropDown 2s ease-out;
+        opacity: 0.7;
+        bottom: 10%;
+        
+        
 }
 
-.sites {
-    display: flex;
-    width: 960px;
-    height: auto;
-    border: 5px solid red;
-    justify-content: center;
+.header h1 {
+        color: white;
+        
+        width: 30%;
+        height: 30%;
+        text-align: center;
+        line-height: 300%;
+        background: rgb(3,0,54);
+        background-image: var(--gradient);
+        border-radius: 5%;
+        background-size: 300%;
+        background-position: left;
+        transition: 1s;
+        animation: header 7s infinite alternate;
+        cursor: pointer;
+        
+        
+}
+
+.header:hover h1 {
+        width: 90%;
+}
+
+
+
+.main-content {
+        position: relative;
+        bottom: 10%;
+        width: 70%;
+        height: 50%;
+        /* background-color: rgba(94, 255, 0, 0.164); */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        
+        
+        
+}
+
+.article1 {
+        width: 90%;
+        background-color: rgb(0, 0, 0);
+        margin: 5%;
+        text-align: center;
+        font-family: monospace;
+        box-shadow: 0 0 1px white;
+        border-radius: 10px;
+        
+        
+}
+.main-content .dynamic-txt {
+        margin-left: 15px;
+        height: 20px;
+        line-height: 20px;
+        color: red;
+        overflow: hidden;
+}
+
+.article1 p {
+        color: pink;
+        animation: text-glow 5s infinite alternate;
+        font-size: 1.2rem;
+        text-align: left;
+}
+
+.article1 ul li {
+        text-align: left;
+        color: greenyellow;
+        /* animation: text-glow 5s infinite alternate; */
+        font-size: 1.2rem;
+}
+
+.article2 {
+        width: 40%;
+        background-color: rgba(0, 0, 0, 0.651);
+        margin: 5%;
+}
+
+.dynamic-txt li {
+        position: relative;
+        list-style: none;
+        left: 10%;
+        top: 0px;
+        animation: slide 6s steps(3) infinite;
+        
+}
+
+@keyframes slide {
+     
+   100%{
+        top: -300%;
+   }     
+}
+
+.dynamic-txt li span {
+        position: relative;
+}
+
+.dynamic-txt li span::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        border-left: 2px solid red;
+        animation: typing 2s steps(20) infinite;
+        
+}
+
+.static-text {
+
+        position: relative;
+        top: 14%;
+        left: 6%;
+}
+
+@keyframes typing {
+        0% {
+                left: 0%;
+                
+        }
+
+        100% {
+                left: 100%;
+                
+                margin: 0 -35px 0 35px;
+        }
 
 }
 
-.sites img {
-    display: flex;
-    object-fit: cover;
+
+
+
+
+
+
+@keyframes glowing {
+       0%{
+               box-shadow: 0 0 0 5px white;
+       }
+
+       100%{
+               box-shadow: 0 0 50px 55px white;
+       }
 }
 
-nav {
-    text-align: center;
-    font-family: cursive;
-    font-size: 1em;
+@keyframes header {
+        0% {
+                background-position: left;
+        }
+        100%{
+                background-position: right;
+        }
 }
 
-.random {
-    background-color: rebeccapurple;
-    color: bisque;
-    font-family: cursive;
-    font-size: 1.5em;
-    border-radius: 30%;
-    
+@keyframes dropDown {
+        0%{
+                bottom: -100%;
+                opacity: 0;
+        }
+        100%{
+                
+                bottom: 20%;
+                opacity: 0.7;
+        }
 }
 
-#factsP {
-    font-family: monospace;
-    font-size: 1.2em;
-    color: yellow;
-    font-style: italic;
-    padding: 6px;
+@keyframes text-glow {
+        0%{
+                text-shadow: 0 0 50px green;
+        }
+        100%{
+                text-shadow: 0 20px 200px green;
+                color: white;
+        }
 }
-.jello-horizontal {
-	-webkit-animation: jello-horizontal 2.0s both;
-	        animation: jello-horizontal 2.0s both;
-}
-.heartbeat {
-	-webkit-animation: heartbeat 1.5s ease-in-out 3s infinite both;
-	        animation: heartbeat 1.5s ease-in-out 3s infinite both;
-}
-/* ----------------------------------------------
- * Generated by Animista on 2021-11-20 22:13:41
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation jello-horizontal
- * ----------------------------------------
- */
- @-webkit-keyframes jello-horizontal {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-              transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-              transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(1.15, 0.85, 1);
-              transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-              transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-              transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-  }
-  @keyframes jello-horizontal {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-              transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-              transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(1.15, 0.85, 1);
-              transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-              transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-              transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-  }
- 
 
-/* ----------------------------------------------
- * Generated by Animista on 2021-11-20 22:55:46
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
+/* :root {
+        --gradient: linear-gradient(
+                90deg, rgba(104, 0, 153, 1) 0%, rgba(0, 91, 153,1) 100%     
+        )
+} */
+/* 
+body {
+  background-image: var(--gradient);     
+  background-size: 400%;
+  animation: bg-animation 15s infinite alternate;
+} */
 
-/**
- * ----------------------------------------
- * animation heartbeat
- * ----------------------------------------
- */
- @-webkit-keyframes heartbeat {
-    from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    10% {
-      -webkit-transform: scale(0.91);
-              transform: scale(0.91);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    33% {
-      -webkit-transform: scale(0.87);
-              transform: scale(0.87);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-  @keyframes heartbeat {
-    from {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transform-origin: center center;
-              transform-origin: center center;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    10% {
-      -webkit-transform: scale(0.91);
-              transform: scale(0.91);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    17% {
-      -webkit-transform: scale(0.98);
-              transform: scale(0.98);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-    33% {
-      -webkit-transform: scale(0.87);
-              transform: scale(0.87);
-      -webkit-animation-timing-function: ease-in;
-              animation-timing-function: ease-in;
-    }
-    45% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-    }
-  }
-  
+/* @keyframes bg-animation {
+        0% {background-position: left; }
+        100% {background-position: right; }
+} */
