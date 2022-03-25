@@ -21,6 +21,7 @@ body {
         
 }
 
+
 .sky-container {
         width: 100%;
         height: 100%;
@@ -74,9 +75,11 @@ body {
         align-items: center;
         justify-content: center;
         position: relative;
-        animation: dropDown 2s ease-out;
+        /* animation: dropDown 2s ease-out; */
         opacity: 0.7;
-        bottom: 10%;
+        bottom: 5%;
+        left: 30%;
+        
         
         
 }
@@ -96,41 +99,46 @@ body {
         transition: 1s;
         animation: header 7s infinite alternate;
         cursor: pointer;
+        text-shadow: 0 1px 5px;
         
         
 }
 
 .header:hover h1 {
-        width: 90%;
+        width: 40%;
+        filter: blur(1px);
+        
+
 }
-
-
 
 .main-content {
         position: relative;
-        bottom: 10%;
-        width: 70%;
-        height: 50%;
-        /* background-color: rgba(94, 255, 0, 0.164); */
+        left: 30%;
+        bottom: 30%;
+        width: 40%;
+        height: 20%;
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin: auto;
-        
-        
-        
+        border-radius: 5%; 
 }
 
 .article1 {
-        width: 90%;
+        width: 99%;
         background-color: rgb(0, 0, 0);
-        margin: 5%;
+        border-radius: 5%;
+        margin: 0.5%;
         text-align: center;
         font-family: monospace;
-        box-shadow: 0 0 1px white;
-        border-radius: 10px;
+        box-shadow: 0 0 1px rgba(0,212,255,1);
+        /* background: url(_MG_3720.jpg);
+        background-repeat:round;
         
+        background-size: 400px 400px; */
         
+        animation: onLoading 0.9s ease-out;       
 }
 .main-content .dynamic-txt {
         margin-left: 15px;
@@ -141,30 +149,40 @@ body {
 }
 
 .article1 p {
+        
         color: pink;
         animation: text-glow 5s infinite alternate;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         text-align: left;
+        padding: 1%;;
 }
 
 .article1 ul li {
         text-align: left;
         color: greenyellow;
         /* animation: text-glow 5s infinite alternate; */
-        font-size: 1.2rem;
+        font-size: 0.9rem;
 }
 
-.article2 {
-        width: 40%;
-        background-color: rgba(0, 0, 0, 0.651);
-        margin: 5%;
+.article1 .static-text {
+        position: relative;
+        top: 0%;
+        left: 0%;
 }
+
+.dynamic-txt {
+        position: relative;
+        top: 5%;
+        left: 10%;
+}
+
 
 .dynamic-txt li {
         position: relative;
         list-style: none;
-        left: 10%;
-        top: 0px;
+        left: 0%;
+        top: 0;
+        
         animation: slide 6s steps(3) infinite;
         
 }
@@ -197,6 +215,46 @@ body {
         top: 14%;
         left: 6%;
 }
+
+.sidenav {
+        position: relative;
+        bottom: 20%;
+        font-family: monospace;
+        font-size: 3rem;
+        width: 40%;
+}
+
+.sidenav ul li {
+        list-style-type: none;
+        color: white;
+        text-shadow: 0 1px 5px;
+        
+}
+
+.sidenav ul li:hover {
+        color: red;
+        cursor: pointer;
+        font-size: 4rem;
+        transition: all 0.5s ease-out;
+}
+
+.footer-icons {
+        display: flex;
+        position: relative;
+        top: 10%;
+}
+
+.github {
+        height: 20%;
+        width: 20%;
+}
+
+.htmlIcon {
+        height: 20%;
+        width: 20%;
+}
+
+
 
 @keyframes typing {
         0% {
@@ -242,10 +300,9 @@ body {
                 bottom: -100%;
                 opacity: 0;
         }
+       
         100%{
-                
-                bottom: 20%;
-                opacity: 0.7;
+                bottom: 10%;
         }
 }
 
@@ -259,20 +316,11 @@ body {
         }
 }
 
+@keyframes onLoading {
+        0%{
+                width: 20%;
+        }
+                
+}
 
-/* :root {
-        --gradient: linear-gradient(
-                90deg, rgba(104, 0, 153, 1) 0%, rgba(0, 91, 153,1) 100%     
-        )
-} */
-/* 
-body {
-  background-image: var(--gradient);     
-  background-size: 400%;
-  animation: bg-animation 15s infinite alternate;
-} */
 
-/* @keyframes bg-animation {
-        0% {background-position: left; }
-        100% {background-position: right; }
-} */
