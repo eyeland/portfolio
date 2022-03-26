@@ -86,17 +86,13 @@ body {
 /* GRID */
 
 .outter-grid{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        bottom: 15%;
-        z-index: 1;
+    height: inherit;
+    width: inherit;
 }
 
 .main-grid{
-        display: inline-block;
-        position: relative;
-        padding: 5%;
+     width: inherit;
+     height: inherit;
       
 }
 
@@ -112,7 +108,8 @@ body {
 
 .header {
         font-family: monospace; 
-        position: relative;
+        position: absolute;
+        top: 0;
         opacity: 0.7;  
         grid-area: headerbar;         
 }
@@ -146,7 +143,11 @@ body {
 /* Start of Terminal */
 
 .main-content {
-       display: blocks
+       display: block;
+       position: absolute;
+       bottom: 0%;
+       width: 100%;
+       height: 20%;
     
 }
 
@@ -275,6 +276,10 @@ body {
 /* Start of Footer Icons */
 .outter-footer {
        position: relative;
+       left: 35%;
+       bottom: 10%;
+       transform: rotate(90deg);
+  
      
        
        
@@ -284,40 +289,50 @@ body {
 .footer-icons {
         display: flex;
         padding: 5%;
+        align-items: center;
+        justify-content: center;
+ 
+        
        
 }
 
 .github {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
+        transform: rotate(-90deg);
   
 }
 
 .htmlIcon {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
+        transform: rotate(-90deg);
 }
 
 .reactIcon {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
         animation: reactRotate 3s linear infinite;
+        transform: rotate(-90deg);
 }
 
 .reduxIcon {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
         animation: reduxtRotate 4s ease-in-out infinite alternate;
+        transform: rotate(-90deg);
 }
 
 .mochaIcon {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
+        transform: rotate(-90deg);
        
 }
 .nodeJsIcon {
-        max-height: 15%;
-        max-width: 15%;
+        max-height: 10%;
+        max-width: 10%;
+        transform: rotate(-90deg);
        
 }
 
