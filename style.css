@@ -393,9 +393,14 @@ body {
 
 .sidenav {
         grid-area: sidenavbar;
-
+        height: 100%;
+        width: 100%;
         font-family: monospace;
         font-size: 3rem;
+        position: absolute;
+        top: 25%;
+
+       
 }
 
 .sidenav ul li {
@@ -745,13 +750,41 @@ body {
 /* End of Media Queries */
 
 
+#aboutMeAfter {
+        height: 650px;
+        width: 450px;
+        background: rgb(3,0,54);
+        background: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(121,9,89,1) 49%, rgba(0,212,255,1) 100%);
+        position: absolute;
+        top: 120%;
+        opacity: 0.6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        
+        
 
+}
 
+#aboutMeAfterText {
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        font-family: monospace;
+        color: #fff;
+        width: 65%;
+        height: 100%;
+        position: relative;
+        top: 5%;
+        padding: 5%;
+
+       
+}
 
 
 #aboutMe {
-        position: relative;
-        
+        position: relative;     
 }
 #contact {
         position: relative;
@@ -780,6 +813,13 @@ body {
         }
 }
 
+@keyframes leftFade {
+        100%{
+                left: 120%;
+        }
+}
+
+
 @keyframes idle {
         100%{
 
@@ -787,3 +827,20 @@ body {
 }
 
 
+@keyframes aboutMeHover {
+        100%{
+                bottom: 79%;
+                right: 25%;
+        }
+}
+
+@keyframes aboutMeClick {
+        100%{
+                top: 0%;
+        }
+}
+@keyframes aboutMeBox {
+        100%{
+                top: 25%;
+        }
+}
