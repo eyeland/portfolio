@@ -260,7 +260,8 @@ body {
        border: 1px solid #ccc;
        box-shadow: 5px -10px 10px white;
        animation: bryantglow 6s infinite alternate;
-       transition: all 0.3s ease
+       transition: all 0.3s ease;
+       cursor: pointer;
 }
 
 .meditateBryant:hover {
@@ -748,5 +749,41 @@ body {
 
 
 
+#aboutMe {
+        position: relative;
+        
+}
+#contact {
+        position: relative;
+}
+#portfolio {
+        position: relative;
+}
+
+
+
+
+@keyframes aboutMeFade {
+        0% {
+                right: 0;
+
+        }
+        100% {
+                right: 180%;
+        }
+}
+
+@keyframes downFade {
+       
+        100%{
+                bottom: -65%;
+        }
+}
+
+@keyframes idle {
+        100%{
+
+        }
+}
 
 
