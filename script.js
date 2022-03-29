@@ -10,6 +10,7 @@ const footerIcons = document.getElementById('footerIcons');
 const consoleText = document.getElementById('consoleText');
 const navBar = document.getElementById('navBar');
 const aboutMeAfter = document.getElementById('aboutMeAfter');
+const contactInfoScreen = document.getElementById('contactInfoScreen')
 
 
 
@@ -60,14 +61,6 @@ const fadeOnAboutMe = () => {
     navBar.style.animation = "aboutMeClick 1.7s ease-in";
     aboutMeAfter.style.animation = "aboutMeBox 1.7s ease-in";
 
-    
-   
-
-    // position: absolute;
-    // bottom: 79%;
-    // right: 25%;
-
-
     setTimeout(() =>{
         // aboutMe.style.right = "180%";
         aboutMeAfter.style.top = "25%";
@@ -81,9 +74,38 @@ const fadeOnAboutMe = () => {
         
     }, 1700);
 }
-
-
 // End of Click fade on About Me //
+
+//Begin of Contact Fade Out //
+
+
+const fadeOnContact = () => {
+  
+    aboutMe.style.animation="aboutMeFade 1.7s ease-in";
+    portfolio.style.animation="aboutMeFade 2s ease-out";
+    headerBar.style.animation="aboutMeFade 2s ease-out";
+    // Down Animation //
+    footerIcons.style.animation="downFade 2s ease-in";
+    consoleText.style.animation="downFade 2s ease-out";
+    //Left Animation //
+    bryant.style.animation = "leftFade 2s linear";
+    navBar.style.animation = "aboutMeClick 1.7s ease-in";
+    contactInfoScreen.style.animation = "contactClick 1.7s ease-in";
+    
+    
+
+    setTimeout(() =>{
+        contactInfoScreen.style.left = "0%";
+        aboutMe.style.right = "180%";
+        portfolio.style.right = "180%";
+        headerBar.style.right = "180%";
+        footerIcons.style.bottom = "-65%";
+        consoleText.style.bottom = "-65%";
+        bryant.style.left = "120%";  
+        navBar.style.top = "0%";
+        
+    }, 1700);
+}
 
 
 
@@ -97,6 +119,9 @@ bryant.addEventListener('click', () => {
     fadeOnBryant();
 })
 
+contact.addEventListener('click', () => {
+    fadeOnContact();
+})
 
 
 
