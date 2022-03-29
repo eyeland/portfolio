@@ -10,7 +10,10 @@ const footerIcons = document.getElementById('footerIcons');
 const consoleText = document.getElementById('consoleText');
 const navBar = document.getElementById('navBar');
 const aboutMeAfter = document.getElementById('aboutMeAfter');
-const contactInfoScreen = document.getElementById('contactInfoScreen')
+const contactInfoScreen = document.getElementById('contactInfoScreen');
+const portfolioPage = document.getElementById('portfolioPage');
+const teaCozyImg = document.getElementById('teaCozyImg');
+const xButton = document.getElementById('xButton');
 
 
 
@@ -109,11 +112,71 @@ const fadeOnContact = () => {
 
 
 
+// End of Fade Out //
+
+
+
+//Start of Portfolio Page//
+
+const fadeOnPortfolio = () => {
+    portfolioPage.style.animation="portfolio 1.7s ease-in";
+    contact.style.animation="aboutMeFade 2s linear";
+    aboutMe.style.animation="aboutMeFade 1.7s ease-in";
+    portfolio.style.animation="aboutMeFade 2s ease-out";
+    headerBar.style.animation="aboutMeFade 2s ease-out";
+    // Down Animation //
+    footerIcons.style.animation="downFade 2s ease-in";
+    consoleText.style.animation="downFade 2s ease-out";
+    //Left Animation //
+    bryant.style.animation = "leftFade 2s linear";
+    navBar.style.animation = "aboutMeClick 1.7s ease-in";
+    portfolio.style.animation="aboutMeFade 2s ease-out";
+   
+    
+    setTimeout(() =>{
+        contact.style.right = "180%";
+        aboutMe.style.right = "180%";
+        portfolio.style.right = "180%";
+        headerBar.style.right = "180%";
+        footerIcons.style.bottom = "-65%";
+        consoleText.style.bottom = "-65%";
+        bryant.style.left = "120%";  
+        navBar.style.top = "0%";
+        portfolioPage.style.top = "10%";
+        portfolioPage.style.removeProperty('animation');
+        
+    }, 1700);
+   
+}
+
+
+const backToHome = () =>{
+    portfolioPage.style.animation="portfolio 1.7s 0s 1 reverse";
+    
+    
+    setTimeout(() =>{
+        contact.style.right = "180%";
+        aboutMe.style.right = "180%";
+        portfolio.style.right = "180%";
+        headerBar.style.right = "180%";
+        footerIcons.style.bottom = "-65%";
+        consoleText.style.bottom = "-65%";
+        bryant.style.left = "120%";  
+        navBar.style.top = "0%";
+        portfolioPage.style.top = "10%";
+        
+    }, 1700);
+
+}
+
+
+
+
+
+
 aboutMe.addEventListener('click', () => {
    fadeOnAboutMe();
 })
-
-
 
 bryant.addEventListener('click', () => {
     fadeOnBryant();
@@ -123,5 +186,12 @@ contact.addEventListener('click', () => {
     fadeOnContact();
 })
 
+portfolio.addEventListener('click', () => {
+    fadeOnPortfolio();
+})
 
+xButton.addEventListener('click', () => {
+    backToHome();
+    console.log('button is working')
+})
 

@@ -815,6 +815,55 @@ body {
         padding: 2%;
 }
 
+#portfolioPage {
+        position: absolute;
+        top: 120%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        
+       
+       
+}
+
+#teaCozyImg {
+        width: 90%;
+        height: 90%;      
+}
+
+#xButton {
+        position: absolute;
+        top: 1%;
+        right: 10%;
+        font-family: monospace;
+        background-color: black;
+        color: white;
+        text-shadow: 0 0 5px white;
+        height: 7%;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        transition: all 0.3s ease-in;
+        border: 1px solid #ccc;
+}
+#xButton:hover {
+        width: 6%;
+        height: 4%;
+}
+
+
+@keyframes portfolio {
+        0% {
+                top: 120%;
+        }
+        100%{
+                top: 10%;
+        }
+}
+
 
 
 @keyframes aboutMeFade {
