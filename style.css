@@ -821,10 +821,17 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 99;
-        
-       
-       
+        z-index: 99;      
+}
+
+#headerBar {
+        left: 0%;
+}
+
+@keyframes headerBarFade {
+        100%{
+                left: -120%;
+        }
 }
 
 #teaCozyImg {
