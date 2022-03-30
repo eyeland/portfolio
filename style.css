@@ -260,7 +260,7 @@ body {
        border: 1px solid #ccc;
        box-shadow: 5px -10px 10px white;
        animation: bryantglow 6s infinite alternate;
-       transition: all 0.3s ease;
+       transition: all 0.5s ease 0.5s;
        cursor: pointer;
 }
 
@@ -293,6 +293,7 @@ body {
        bottom: 0%;
        width: 100%;
        height: 20%;
+       transition: all 2s ease-in;
     
 }
 
@@ -319,15 +320,15 @@ body {
 
 .article1 p {
         
-        color: pink;
-        animation: text-glow 5s infinite alternate;
+        color: rgb(194, 9, 148);
+        
         font-size: 0.8rem;
         text-align: left;
 }
 
 .article1 ul li {
         text-align: left;
-        color: greenyellow;
+        color: skyblue;
         /* animation: text-glow 5s infinite alternate; */
         font-size: 1rem;
 }
@@ -401,9 +402,18 @@ body {
         top: 25%;
         line-height: 150%;
         right: 6%;
+        animation: testing 8s linear alternate infinite;
+}
 
-
-       
+@keyframes testing {
+        25%{
+                transform: rotate(-1deg);  
+                width: 95%;
+        }
+        75%{
+                transform: rotate(1deg);
+        
+        }
 }
 
 .sidenav ul li {
@@ -418,7 +428,7 @@ body {
 }
 
 .sidenav ul li:hover {
-        color: red;
+        color: skyblue;
         cursor: pointer;
         font-size: 2rem;
         transition: all 0.5s ease-out;
@@ -442,8 +452,7 @@ body {
        display: flex;
        align-items: center;
        justify-content: center;
-             
-        
+       transition: all 1.3s ease-in;          
 }
 
 .footer-icons {
@@ -768,6 +777,7 @@ body {
         border-radius: 15px;
         border: 1px solid #ccc;
         padding: 10px;
+        transition: all 1s ease-in;
         
         
 
@@ -783,22 +793,31 @@ body {
         position: relative;
         margin: 3%;
         padding: 2%;
-
+        transition: all 1s ease-in;
        
 }
 
 
 #aboutMe {
-        position: relative;     
+        position: relative;    
+        transition: all 1s ease-in;
+        right: 0;
 }
 #contact {
         position: relative;
+        transition: all 1s ease-in;
+        right: 0%;
+        
 }
 #portfolio {
         position: relative;
+        transition: all 1s ease-in;
+        right: 0;
 }
 #technologies{
         position: relative;
+        transition: all 1s ease-in;
+        right: 0;
 }
 
 #contactInfoScreen {
@@ -815,6 +834,7 @@ body {
         left: 120%;
         opacity: 0.6;
         border-radius: 20px;
+        transition: all 1s ease-in;
 }
 
 #contactInfoText {
@@ -830,10 +850,12 @@ body {
         align-items: center;
         justify-content: center;
         z-index: 99;      
+        transition: all 2.5s ease;
 }
 
 #headerBar {
         left: 0%;
+        transition: all 1 ease-in;
 }
 
 @keyframes headerBarFade {
@@ -870,96 +892,3 @@ body {
         height: 4%;
 }
 
-
-@keyframes portfolio {
-        0% {
-                top: 120%;
-        }
-        100%{
-                top: 10%;
-        }
-}
-
-
-
-@keyframes aboutMeFade {
-        0% {
-                right: 0;
-
-        }
-        100% {
-                right: 180%;
-        }
-}
-
-@keyframes downFade {
-       
-        100%{
-                bottom: -65%;
-        }
-}
-
-@keyframes downFadeIcons {
-        0% {
-                bottom: -60%;
-        }
-        100% {
-                bottom: 10%;
-        }
-}
-
-@keyframes leftFade {
-        0%{
-                left: 72%;
-        }
-        100%{
-                left: 120%;
-        }
-}
-
-
-@keyframes idle {
-        100%{
-
-        }
-}
-
-
-@keyframes aboutMeHover {
-        100%{
-                bottom: 79%;
-                right: 25%;
-        }
-}
-
-@keyframes aboutMeClick {
-        100%{
-                top: 0%;
-        }
-}
-@keyframes aboutMeClickTech {
-        100%{
-                top: -20%;
-        }
-}
-
-@keyframes aboutMeBox {
-        100%{
-                top: 35%;
-        }
-}
-
-@keyframes contactClick {
-        100%{
-                left: 0%;
-        }
-}
-
-/* To make About me lower on click */
-
-@keyframes aboutMeClickPage {
-        
-        100%{
-                top: 10%;
-        }
-}
