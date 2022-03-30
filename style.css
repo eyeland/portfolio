@@ -396,9 +396,12 @@ body {
         height: 100%;
         width: 100%;
         font-family: monospace;
-        font-size: 3rem;
+        font-size: 2.5rem;
         position: absolute;
         top: 25%;
+        line-height: 150%;
+        right: 6%;
+
 
        
 }
@@ -406,7 +409,12 @@ body {
 .sidenav ul li {
         list-style-type: none;
         color: white;
-        text-shadow: 0 1px 5px;      
+        text-shadow: 0 1px 5px; 
+        border: 5px solid white;    
+        box-shadow: 0 0  10px white; 
+        border-radius: 20px;
+        margin: 2%;
+        text-align: center;
 }
 
 .sidenav ul li:hover {
@@ -430,15 +438,11 @@ body {
       
        position: absolute;
        left: 0%;
-       bottom: 19%;
+       bottom: -60%;
        display: flex;
        align-items: center;
        justify-content: center;
-       
-  
-     
-       
-       
+             
         
 }
 
@@ -751,7 +755,7 @@ body {
 
 
 #aboutMeAfter {
-        height: 650px;
+        height: 350px;
         width: 450px;
         background: rgb(3,0,54);
         background: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(121,9,89,1) 49%, rgba(0,212,255,1) 100%);
@@ -763,6 +767,7 @@ body {
         justify-content: center;
         border-radius: 15px;
         border: 1px solid #ccc;
+        padding: 10px;
         
         
 
@@ -770,14 +775,14 @@ body {
 
 #aboutMeAfterText {
         border-radius: 15px;
-        border: 1px solid #ccc;
+        border: 3px solid #ccc;
         font-family: monospace;
         color: #fff;
         width: 65%;
         height: 100%;
         position: relative;
-        top: 5%;
-        padding: 5%;
+        margin: 3%;
+        padding: 2%;
 
        
 }
@@ -790,6 +795,9 @@ body {
         position: relative;
 }
 #portfolio {
+        position: relative;
+}
+#technologies{
         position: relative;
 }
 
@@ -855,6 +863,7 @@ body {
         border-radius: 50px;
         transition: all 0.3s ease-in;
         border: 1px solid #ccc;
+        cursor: pointer;
 }
 #xButton:hover {
         width: 6%;
@@ -890,7 +899,19 @@ body {
         }
 }
 
+@keyframes downFadeIcons {
+        0% {
+                bottom: -60%;
+        }
+        100% {
+                bottom: 10%;
+        }
+}
+
 @keyframes leftFade {
+        0%{
+                left: 72%;
+        }
         100%{
                 left: 120%;
         }
@@ -916,14 +937,29 @@ body {
                 top: 0%;
         }
 }
+@keyframes aboutMeClickTech {
+        100%{
+                top: -20%;
+        }
+}
+
 @keyframes aboutMeBox {
         100%{
-                top: 25%;
+                top: 35%;
         }
 }
 
 @keyframes contactClick {
         100%{
                 left: 0%;
+        }
+}
+
+/* To make About me lower on click */
+
+@keyframes aboutMeClickPage {
+        
+        100%{
+                top: 10%;
         }
 }
