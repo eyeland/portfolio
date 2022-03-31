@@ -15,31 +15,7 @@ const portfolioPage = document.getElementById('portfolioPage');
 const teaCozyImg = document.getElementById('teaCozyImg');
 const xButton = document.getElementById('xButton');
 const technologies = document.getElementById('technologies');
-
-
-
-
-const removeAllAnimations = () => {
-
-    setTimeout(() => {
-        aboutMe.style.removeProperty('animation');
-        contact.style.removeProperty('animation');
-        portfolio.style.removeProperty('animation');
-        headerBar.style.removeProperty('animation');
-        footerIcons.style.removeProperty('animation');
-        consoleText.style.removeProperty('animation');
-        bryant.style.removeProperty('animation');
-        portfolioPage.style.removeProperty('animation');
-        contactInfoScreen.style.removeProperty('animation');
-        aboutMeAfter.style.removeProperty('animation');
-        technologies.style.removeProperty('animation');
-        navBar.style.removeProperty('animation');
-        
-
-    }, 2000)
-
-}
-
+const techPage = document.getElementById('techPage');
 
 // Start of X button //
 const reverseAnimations = () => {
@@ -64,8 +40,6 @@ const reverseAnimations = () => {
 }
 
 //ENd of X button //
-
-
 
 // Click on Bryant Code //
 const fadeOnBryant = () => {
@@ -126,7 +100,6 @@ const fadeOnContact = () => {
 // End of Fade Out //
 
 
-
 //Start of Portfolio Page//
 // Portfolio was changed to Projects for better naming //
 
@@ -158,7 +131,8 @@ const fadeOnTechnologies = () => {
         headerBar.style.left = "0%";
         footerIcons.style.bottom = "10%";
         consoleText.style.bottom = "-65%";
-        bryant.style.left = "120%";           
+        bryant.style.left = "120%";   
+        techPage.style.top = "15%";        
     }, 15);
 
 }
@@ -168,10 +142,6 @@ const fadeOnTechnologies = () => {
 const backToHome = () =>{
     reverseAnimations();
 }
-
-
-
-
 
 
 aboutMe.addEventListener('click', () => {
@@ -197,3 +167,36 @@ xButton.addEventListener('click', () => {
 technologies.addEventListener('click', () => {
     fadeOnTechnologies();
 })
+
+// Animate SlideShow ///
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  console.log(dots)
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
