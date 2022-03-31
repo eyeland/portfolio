@@ -21,23 +21,43 @@ const techPage = document.getElementById('techPage');
 const reverseAnimations = () => {
 
     setTimeout(() =>{
-        technologies.style.right = "0%";
-        aboutMe.style.right = "0%";
-        aboutMeAfter.style.top = "120%";
-        contact.style.right = "0%";
-        portfolio.style.right = "0%";
-        headerBar.style.left = "0%";
-        footerIcons.style.bottom = "-60%";
-        consoleText.style.bottom = "-0%";
-        navBar.style.top = "25%";
-        portfolioPage.style.top = "120%";
-        contactInfoScreen.style.left = "120%";
-        bryant.style.maxHeight = "20%";
-        bryant.style.maxWidth = "20%";
-        bryant.style.left = "72%";   
+        // technologies.style.right = "0%";
+        // aboutMe.style.right = "0%";
+        // aboutMeAfter.style.top = "120%";
+        // contact.style.right = "0%";
+        // portfolio.style.right = "0%";
+        // headerBar.style.left = "0%";
+        // footerIcons.style.bottom = "-60%";
+        // consoleText.style.bottom = "-0%";
+        // navBar.style.top = "25%";
+        // portfolioPage.style.top = "120%";
+        // contactInfoScreen.style.left = "120%";
+        // bryant.style.maxHeight = "20%";
+        // bryant.style.maxWidth = "20%";
+        // bryant.style.left = "72%";   
+        // techPage.style.top = "120%";
+
+
+        technologies.style.right = null;
+        aboutMe.style.right = null;
+        aboutMeAfter.style.top = null;
+        contact.style.right = null;
+        portfolio.style.right = null;
+        headerBar.style.top = null;
+        footerIcons.style.bottom = null;
+        consoleText.style.bottom = null;
+        navBar.style.top = null;
+        portfolioPage.style.top = null;
+        contactInfoScreen.style.left = null;
+        bryant.style.maxHeight = null;
+        bryant.style.maxWidth = null;
+        bryant.style.left = null;
+        techPage.style.top = null;
     }, 15);
 
 }
+
+
 
 //ENd of X button //
 
@@ -129,10 +149,10 @@ const fadeOnTechnologies = () => {
         portfolio.style.right = "180%";
         technologies.style.right = "120%";
         headerBar.style.left = "0%";
-        footerIcons.style.bottom = "10%";
+        footerIcons.style.bottom = "5%";
         consoleText.style.bottom = "-65%";
         bryant.style.left = "120%";   
-        techPage.style.top = "15%";        
+        techPage.style.top = "22%";        
     }, 15);
 
 }
