@@ -67,7 +67,7 @@ const fadeOnBryant = () => {
     setTimeout(() =>{
 
         aboutMe.style.right = "180%";
-        contact.style.right = "110%";
+        contact.style.right = "120%";
         portfolio.style.right = "150%";
         technologies.style.right = "120%";
         headerBar.style.left = "0%";
@@ -87,7 +87,7 @@ const fadeOnBryant = () => {
 const fadeOnAboutMe = () => {
 
         setTimeout(() =>{
-            aboutMe.style.right = "110%";
+            aboutMe.style.right = "130%";
             aboutMeAfter.style.top = "35%";
             contact.style.right = "160%";
             portfolio.style.right = "140%";
@@ -220,3 +220,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
 }
+
